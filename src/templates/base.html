@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TITLE</title>
+    </head>
+    <body>
+        This will show in every html
+        <h2>Hello {{request.user}}</h2>
+        {% block content %}
+        This is the base template. This will not show 
+        {% endblock %}
+    </body>
+</html>

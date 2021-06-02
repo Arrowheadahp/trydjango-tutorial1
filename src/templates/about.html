@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+This is the about template 
+
+{{text}}, {{num}}
+
+{{my_html|safe}}
+
+
+{% for item in list %}
+<ul>
+    <li>{{item}}</li>
+</ul>
+
+
+{% endfor %}
+
+
+
+{% endblock %}
+
