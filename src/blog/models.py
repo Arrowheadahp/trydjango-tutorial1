@@ -11,17 +11,17 @@ class article(models.Model):
     active  = models.BooleanField(default=True)
     
 
-    def get_original_url(self):
-        return reverse('blog:article_view', 'article_view')
+    def get_absolute_url(self):
+        return reverse('blog:article_view', kwargs={'pk': self.id})
         
     def get_edit_url(self):
-        return reverse('blog:article_view', 'edit_view')
+        return reverse('blog:edit_view', kwargs={'pk': self.id})
 
     def get_delete_url(self):
-        return reverse('blog:article_view', 'delete_view')
+        return reverse('blog:delete_view', kwargs={'pk': self.id})
 
     def get_create_url(self):
-        return reverse('blog:article_view', 'create_view')
+        return reverse('blog:create_view')
 
     def get_list_url(self):
-        return reverse('blog:article_view', 'list_view')
+        return reverse('blog:list_view')

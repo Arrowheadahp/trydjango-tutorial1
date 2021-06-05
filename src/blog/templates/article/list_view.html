@@ -7,7 +7,7 @@
 <a href = 'create/'> create </a>
         
 <ol>
-    {% for obj in obj_list %} 
+    {% for obj in object_list %} 
     <li>
         <a href = '{{obj.get_absolute_url}}'> {{obj.title}} </a>
         <a href = '{{obj.get_edit_url}}'> EDIT </a>
